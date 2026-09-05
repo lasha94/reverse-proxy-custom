@@ -20,7 +20,7 @@ RUN mkdir -p ${CERT_DIR} && \
     -addext "subjectAltName=DNS:${PRIMARY_DOMAIN},DNS:${SECONDARY_DOMAIN}"
 
 # Nginx-ის შაბლონის კოპირება (envsubst ავტომატურად ჩაანაცვლებს ცვლადებს)
-COPY nginx.conf.template /etc/nginx/templates/nginx.conf.template
+COPY nginx.conf /etc/nginx/templates/nginx.conf.template
 
 EXPOSE 80 443
 
